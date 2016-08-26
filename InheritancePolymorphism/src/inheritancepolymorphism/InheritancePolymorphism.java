@@ -27,7 +27,7 @@ public class InheritancePolymorphism {
        Division d = new Division();
        Quadra q = new Quadra();
        
-       System.out.println("Выберите кол-во переменных от 2 до 4");
+       System.out.println("Выберите кол-во переменных от 1 до 4");
         int number = new Scanner(System.in).nextInt();
         
        System.out.println("Выберите тип операции +-*/");
@@ -37,16 +37,24 @@ public class InheritancePolymorphism {
         
    
         switch (number) {
+            case 1:
+                switch (n){
+                case "Quadra":
+                System.out.println("ВВедите значение переменной x"+" ");
+                x = new Scanner(System.in).nextInt();
+                        q.calc(x);
+                        System.out.println("x*x="+q.calc(x));
+                         break;
+                }  break;
+             
             case 2:
                 System.out.println("ВВедите значение переменной x"+" ");
                 x = new Scanner(System.in).nextInt();
                 System.out.print("Введите значение переменной у"+" ");
                 y = new Scanner(System.in).nextInt();
                 switch (n) {
-                    case "Quadra":
-                        q.calc(x);
-                        System.out.println("x*x="+q.calc(x));
-                        break;
+                    
+                       
                     case "Summ":
                         a.calc(x,y);
                         System.out.println("x+y="+a.calc(x,y));
