@@ -171,6 +171,8 @@ public class InheritancePolymorphism {
         private  Subtraction() {
          super.x = x;
          super.y = y;
+         super.p = p;
+         super.l = l;
         }
         @Override
         public String toString(){return "вычитание";}
@@ -178,6 +180,10 @@ public class InheritancePolymorphism {
        
         double calc(double x , double y){
             return (x-y);
+            
+        } 
+        double calc(double p, double l, double x, double y){
+            return ((x+y)-(p+l));
         }
 
         @Override
